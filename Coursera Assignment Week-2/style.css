@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&family=IBM+Plex+Serif:wght@600&family=League+Gothic&family=League+Spartan:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  /* background-color: black; */
+  display: grid;
+
+  width: 100vw;
+  /* height: calc(100vh - 100px); */
+  /* height: 100vh; */
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 31px;
+  column-gap: 31px;
+
+  padding: 0px 40px;
+}
+.child1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.child2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.child3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.child4 {
+  grid-area: 2 / 1 / 3/ 4;
+  /* background-color: aqua; */
+}
+
+.heading {
+  /* background-color: aqua;  */
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  background-color: rgba(153, 153, 153, 255);
+  /* height: 190px;
+  width: 400px; */
+  margin-top: 30px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.name {
+  background-color: rgba(213, 152, 152, 255);
+  color: black;
+  padding-top: 1px;
+  padding-left: 24px;
+  height: 32px;
+  width: 105px;
+  align-self: flex-end;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  font-size: 1.2rem;
+  font-family: "IBM Plex Serif", serif;
+}
+.pra {
+  font-family: "League Gothic", sans-serif;
+  font-size: 1.5rem;
+  padding: 17px 20px;
+}
+
+.color1 {
+  background-color: rgba(193, 69, 67, 255);
+  color: white;
+}
+.color2 {
+  background-color: rgba(229, 209, 152, 255);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .main {
+    /* background-color: red; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1fr 1fr 0fr);
+  }
+  .child {
+    margin: 0;
+  }
+  .child1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .child2 {
+    grid-area: 1/ 2 / 2 / 3;
+  }
+  .child3 {
+    margin-top: 0px;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  .child4 {
+    grid-area: 3 / 1 / 4/ 3;
+    background-color: aqua;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr 1fr 1fr 0fr);
+    column-gap: 0px;
+    row-gap: 10px;
+    padding: 0px 50px;
+  }
+  .child {
+    margin: 0;
+  }
+  .child1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .child2 {
+    grid-area: 2/ 1 / 3 / 2;
+  }
+  .child3 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .child4 {
+    grid-area: 4 / 1 / 5/ 2;
+  }
+}
